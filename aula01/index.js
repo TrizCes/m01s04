@@ -81,3 +81,58 @@ console.log('Corresponde com some', correspondeSome);
 // Verificar se ao menos um item corresponde ao filtro
 const correspondeEvery = numeros.every((elemento) => elemento % 2 !== 0);
 console.log('Corresponde com every', correspondeEvery);
+
+// Retornar um único valor
+const soma = numeros.reduce((acc, elemento) => (acc += elemento));
+
+// const soma = numeros.reduce((acc, elemento) => {
+//   if (elemento % 2 !== 0) {
+//     return (acc = acc + elemento);
+//   }
+
+//   return acc;
+// }, 0);
+console.log('Soma com reduce', soma);
+
+const aluno = {
+  id: 1,
+  nome: 'Thais',
+  turmas: [
+    {
+      id: 1,
+      nome: 'Audaces',
+    },
+    {
+      id: 2,
+      nome: 'DevInHouse',
+    },
+  ],
+  teste: 'asalskals',
+};
+console.log('Objeto', aluno.teste);
+
+// Deletar propriedade objeto
+delete aluno.teste;
+
+console.log('Objeto com prop deletada', aluno);
+
+// Adicionar metodo
+aluno.imprimeTurma = function () {
+  console.log(this.turmas.map((turma) => turma.nome).join());
+  //   console.log(aluno.turmas.map((turma) => turma.nome).join());
+};
+
+aluno.imprimeTurma();
+
+// Obter nomes das chaves de um objeto
+const chaves = Object.keys(aluno);
+console.log('Object.keys', chaves);
+
+chaves.forEach((chave) => {
+  console.log(chave, aluno[chave]);
+});
+
+// Obter chave e valor objeto
+const chaveValor = Object.entries(aluno);
+
+console.log('Object.entries', JSON.stringify(chaveValor));
