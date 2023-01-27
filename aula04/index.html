@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,5 +10,57 @@
     <title>DevInTasks</title>
   </head>
 
-  <body></body>
+  <body>
+    <header class="header">
+      <img src="./assets/logo.svg" alt="Logo DevInTask" />
+      <h1 class="title">DevInTasks</h1>
+    </header>
+    <main class="main">
+      <section>
+        <form id="form-cadastro" class="form">
+          <h2 class="subtitle">Cadastre suas tarefas</h2>
+
+          <div class="row">
+            <div class="column">
+              <input required id="titulo" class="input" type="text" placeholder="Digite o título da tarefa" />
+              <select required class="select" id="prioridade">
+                <option disabled>Selecione a prioridade</option>
+                <option value="0">Alta</option>
+                <option value="1">Média</option>
+                <option value="2">Baixa</option>
+              </select>
+            </div>
+            <div class="column">
+              <textarea required id="descricao" placeholder="Digite a descrição da tarefa" rows="5"></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="button-secondary" type="reset">Limpar</button>
+            <button class="button-primary" type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+      <section class="search">
+        <input id="input-busca" class="input-search" placeholder="Digite o nome da tarefa"/> 
+        <button id="button-search" class="button-search">
+          <img src="./assets/search.svg" alt="Pesquisar"/>
+        </button>
+
+      </section>
+      <section>
+        <ul id="lista" class="list">
+          <!-- <li class="list-item">
+            <h3 class="subtitle text-center">Teste</h3>
+            <p class="text-center priority color-red">Texto prioridade</p>
+            <p class="description"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum doloremque minima esse vero? Error optio expedita laboriosam nemo accusantium alias sed veritatis reprehenderit eum veniam, culpa labore ab neque iste?
+            </p>
+            <div class="list-item-footer">
+              <input type="checkbox" id="concluida" class="checkbox"/>
+            </div>
+          </li> -->
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
